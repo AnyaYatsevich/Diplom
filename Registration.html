@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="Registration.css">
+    <style>
+        /* Стили для логотипа */
+        .logo {
+            position: absolute;
+            top: 4%; /* Переместить логотип вниз на 5% высоты экрана */
+            right: 80%; /* Переместить логотип вправо на 5% ширины экрана */
+            width: 250px; /* Укажите желаемую ширину */
+            height: auto; /* Автоматическая высота для сохранения пропорций */
+        }
+    </style>
+</head>
+<body>
+    <img src="Entry.png" alt="Логотип" class="logo">
+    <h1>Регистрация</h1>
+    <form action="#" id="registrationForm" novalidate> 
+        <div div class="input-group">
+           <label for="login">Логин:</label>
+            <input type="text" id="login" name="login" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="input-group">
+            <label for="confirmPassword">Подтвердите пароль:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </div>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</body>
+</html>

@@ -36,15 +36,14 @@
         </div>
         <button type="submit">Войти</button>
         <div class="extra-links">
-            <a href="#"  id="Registration">Регистрация</a>
-            <a href="#" id="Passwordrecovery">Восстановление пароля</a>
+            <a href="Registration.html"  id="Registration">Регистрация</a>
         </div>
     </form>
 </body>
 <script>
-document.getElementById("Registration").addEventListener("click", function(event) {
-    event.preventDefault(); // Предотвратить переход по ссылке
-    document.getElementById("loginForm").style.display = "none"; // Скрыть форму
-});
+    document.getElementById("Registration").addEventListener("click", function(event) {
+        event.preventDefault(); // Предотвратить переход по ссылке
+        window.location.href = this.getAttribute("href"); // Перенаправить пользователя на страницу регистрации
+    });
 </script>
 </html>

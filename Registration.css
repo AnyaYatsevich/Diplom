@@ -1,0 +1,73 @@
+/* Общий стиль для страницы */
+body {
+    font-family: "Playfair Display", sans-serif;
+    text-align: center;
+    margin-top: 250px; /* Отступ сверху */
+    background-color: #f4f4f4; /* Цвет фона */
+}
+
+/* Стиль для заголовка */
+h1 {
+    margin-top: 50px; /* Отступ сверху */
+    color: #0b0826; /* Цвет текста */
+    animation: shadow-pulse 2s infinite; /* Анимация тени */
+    text-shadow: 2px 2px 4px #0b0826; /* Тень текста */
+    margin-bottom: 25px; /* Увеличиваем отступ снизу */
+}
+
+/* Анимация для тени заголовка */
+@keyframes shadow-pulse {
+    0% {
+        text-shadow: 2px 2px 4px #8f2a8d80;
+    }
+    50% {
+        text-shadow: 4px 4px 6px #8f2a8d80;
+    }
+    100% {
+        text-shadow: 2px 2px 4px #8f2a8d80;
+    }
+}
+
+/* Стиль для группы ввода */
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-group label {
+    width: 150px;
+    text-align: left;
+    margin-right: 5px;
+    white-space: nowrap;
+    color: #0b0826; /* меняем цвет текста метки */
+    font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 200px;
+    padding: 7px; /* увеличиваем отступ вокруг поля ввода */
+    border: 1px solid #ccc; /* добавляем рамку вокруг поля ввода */
+    border-radius: 5px; /* скругляем углы поля ввода */
+    box-sizing: border-box; /* учитываем рамку в общей ширине поля ввода */
+    margin-left: 25px; /* добавляем отступ слева */
+    margin-top: -10px; /* Отрицательный отступ сверху */
+    margin-bottom: 5px; /* Добавляем отступ снизу */
+
+}
+button {
+    padding: 10px 20px;
+    background-color: #0b0826;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: auto; /* Центрируем кнопку по горизонтали */
+    margin-right: auto; /* Центрируем кнопку по горизонтали */
+    margin-top: 10px; /* Отступ сверху */
+    border-radius: 5px; /* скругляем углы кнопки */
+    transition: background-color 0.3s; /* добавляем плавный переход при наведении */
+}
+button:hover {
+    background-color: #8f2a8d80;
+}
