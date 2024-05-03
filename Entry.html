@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="Entry.css">
+    <style>
+        /* Стили для логотипа */
+        .logo {
+            position: absolute;
+            top: 4%; /* Переместить логотип вниз на 5% высоты экрана */
+            right: 80%; /* Переместить логотип вправо на 5% ширины экрана */
+            width: 250px; /* Укажите желаемую ширину */
+            height: auto; /* Автоматическая высота для сохранения пропорций */
+        }
+    </style>
+</head>
+<body>
+    <img src="Entry.png" alt="Логотип" class="logo">
+</body>
+<body>
+    <h1>Вход в систему</h1>
+    <form action="#" id="loginForm" novalidate> 
+        <div class="input-group">
+            <label for="loginEmail">Логин или e-mail:</label>
+            <input type="text" id="loginEmail" name="loginEmail" required title="">
+        </div>
+        <div class="input-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required title="">
+        </div>
+        <div class="input-group remember-group">
+            <label for="rememberMe">Запомнить меня:</label>
+            <input type="checkbox" id="rememberMe" name="rememberMe">
+        </div>
+        <button type="submit">Войти</button>
+        <div class="extra-links">
+            <a href="#"  id="Registration">Регистрация</a>
+            <a href="#" id="Passwordrecovery">Восстановление пароля</a>
+        </div>
+    </form>
+</body>
+<script>
+document.getElementById("Registration").addEventListener("click", function(event) {
+    event.preventDefault(); // Предотвратить переход по ссылке
+    document.getElementById("loginForm").style.display = "none"; // Скрыть форму
+});
+</script>
+</html>

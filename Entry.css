@@ -1,0 +1,88 @@
+/*Вход*/
+body {
+    font-family: "Playfair Display", sans-serif;
+    text-align: center;
+    margin-top: 250px; /* опускаем содержимое страницы ниже */
+    background-color: #f4f4f4; /* добавляем фоновый цвет */
+}
+
+h1 {
+    margin-top: 50px;
+    color: #0b0826; /* меняем цвет заголовка */
+    animation: shadow-pulse 2s infinite; /* добавляем анимацию */
+    text-shadow: 2px 2px 4px #0b0826; /* добавляем тень */
+}
+
+@keyframes shadow-pulse {
+    0% {
+        text-shadow: 2px 2px 4px #8f2a8d80;
+    }
+    50% {
+        text-shadow: 4px 4px 6px #8f2a8d80;
+    }
+    100% {
+        text-shadow: 2px 2px 4px #8f2a8d80;
+    }
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-group label {
+    width: 150px;
+    text-align: left;
+    margin-right: 5px;
+    white-space: nowrap;
+    color: #0b0826; /* меняем цвет текста метки */
+    font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group input[type="checkbox"] {
+    width: 200px;
+    padding: 7px; /* увеличиваем отступ вокруг поля ввода */
+    border: 1px solid #ccc; /* добавляем рамку вокруг поля ввода */
+    border-radius: 5px; /* скругляем углы поля ввода */
+    box-sizing: border-box; /* учитываем рамку в общей ширине поля ввода */
+}
+.remember-group input[type="checkbox"] {
+    margin-right: 80px; /* Подвигаем чекбокс влево */
+    margin-left: -80px; /* Компенсируем сдвиг текста вправо */
+     transform: scale(1.5); /* Увеличиваем размер чекбокса в 1.5 раза */
+}
+button {
+    padding: 10px 20px;
+    background-color: #0b0826;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 35px;
+    border-radius: 5px; /* скругляем углы кнопки */
+    transition: background-color 0.3s; /* добавляем плавный переход при наведении */
+}
+
+button:hover {
+    background-color: #8f2a8d80;
+}
+
+/* Стили для ссылок "Регистрация" и "Восстановление пароля" */
+.extra-links {
+    margin-top: 20px; /* Отступ сверху */
+    text-align: center; /* Выравнивание по центру */
+}
+
+.extra-links a {
+    color: #0b0826; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 16px; /* Размер шрифта */
+    margin: 0 10px; /* Отступы между ссылками */
+    transition: color 0.3s; /* Плавное изменение цвета текста при наведении */
+}
+
+.extra-links a:hover {
+    color: #8f2a8d; /* Цвет текста при наведении */
+}

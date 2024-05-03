@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Главная страница </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="logo1.png" alt="Логотип сайта" >
+    <button id="menubutton"> </button>
+    <div id="myMenu" style="display: none;">
+      <ul style="font-family: Lucida Sans Unicode; font-size: 16px; color: #0b0826;">
+          <li><a href="Entry.html">Вход</a></li>
+          <li><a href="#" onclick="scrollToContactInfo()">Контактная информация</a></li>
+          <li><a href="link_to_another_page">...</a></li>
+      </ul>
+      <span id="closeButton" class="close-button">&times;</span>
+  </div>
+    <header>
+        <h1></h1>
+        <a id="scroll-down-arrow" href="#why-us"></a>
+      </header>
+    <div class="new-block">
+    <section id="why-us">
+        <h2>Наши преимущества</h2>
+        <div class="advantages-grid">
+            <div class="advantage">
+                <h3>Заголовок преимущества 1</h3>
+                <p>Описание преимущества 1</p>
+            </div>
+            <div class="advantage">
+                <h3>Заголовок преимущества 2</h3>
+                <p>Описание преимущества 2</p>
+            </div>
+            <div class="advantage">
+                <h3>Заголовок преимущества 3</h3>
+                <p>Описание преимущества 3</p>
+            </div>
+            <div class="advantage">
+                <h3>Заголовок преимущества 4</h3>
+                <p>Описание преимущества
+                Описание преимущества
+                Описание преимущества
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <div id="contact-info">
+      <h2>Контактная информация</h2>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="square">
+            <div class="icon"><img src="Location.png" alt="Новая иконка"></div>
+            <p>Адрес:<br>Санкт-Петербург <br> наб.реки Мойки д.61</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="square">
+            <div class="icon">&#9993;</div>
+            <p>Email:<br> mmexico1@yandex.ru</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="square">
+            <div class="icon">&#9742;</div>
+            <p>Связь с нами:<br> +7 (901) 314-29-11</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </body>
+    <script>
+        const menubutton = document.getElementById('menubutton');
+        const myMenu = document.getElementById('myMenu');
+        const closeButton = document.getElementById('closeButton');
+        // Функция открытия/закрытия меню
+        function toggleMenu() {
+            myMenu.style.display = myMenu.style.display === 'none' ? 'block' : 'none';
+        }
+         // Обработчик события клика по кнопке меню
+         menubutton.addEventListener('click', toggleMenu);
+          // Обработчик события клика по кнопке закрытия (крестику)
+        closeButton.addEventListener('click', toggleMenu);
+    
+// Флаг для отслеживания состояния меню
+var isMenuOpen = false;
+
+// Обработчик события клика на кнопку меню
+document.getElementById('menubutton').addEventListener('click', function() {
+  var scrollDownArrow = document.getElementById('scroll-down-arrow');
+  // Изменяем состояние меню
+  isMenuOpen = !isMenuOpen;
+  // Проверяем состояние меню и соответственно отображаем или скрываем стрелку
+  if (!isMenuOpen) {
+    scrollDownArrow.style.display = 'block';
+  } else {
+    scrollDownArrow.style.display = 'none';
+  }
+});
+
+// Обработчик события клика на стрелку прокрутки
+document.getElementById('scroll-down-arrow').addEventListener('click', function() {
+  const advantagesHeader = document.getElementById('why-us');
+  window.scrollTo({
+    top: advantagesHeader.offsetTop,
+    behavior: 'smooth' // Плавная прокрутка
+  });
+  // Скрываем стрелку при нажатии на неё
+  this.style.display = 'none';
+});
+
+// Обработчик события прокрутки страницы
+window.addEventListener('scroll', function() {
+  // Получаем текущее положение прокрутки страницы
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  // Показываем или скрываем стрелку в зависимости от положения прокрутки
+  var scrollDownArrow = document.getElementById('scroll-down-arrow');
+  if (!isMenuOpen && scrollTop <= 0) {
+    // Если страница находится в верхней части и меню закрыто, показываем стрелку
+    scrollDownArrow.style.display = 'block';
+  } else {
+    // В противном случае скрываем стрелку
+    scrollDownArrow.style.display = 'none';
+  }
+});
+
+function scrollToContactInfo() {
+  var contactInfo = document.getElementById('contact-info');
+  contactInfo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+    </script>
+</html>
